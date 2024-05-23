@@ -1,10 +1,9 @@
 .container {
   display: block;
-  max-width: 460px;
-  min-height: 500px;
+  width: 420px;
+  height: 520px;
   margin-inline: auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
   border-radius: 12px;
   background: -webkit-linear-gradient(to right, #c33764, #1d2671);
   /* Chrome 10-25, Safari 5.1-6 */
@@ -15,7 +14,7 @@
 .top-bar {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 10px;
   padding-top: 30px;
 }
 
@@ -49,9 +48,15 @@
 }
 
 .weather-image {
-  margin-top: 45px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
+}
+
+.weather-image:hover,
+#wihuser:hover {
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
 }
 
 .weather-temp {
@@ -60,6 +65,7 @@
   color: white;
   font-size: 40px;
   font-weight: 400;
+  margin-top: 30px;
 }
 
 .weather-location {
@@ -80,7 +86,7 @@
 .element {
   margin: auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
 }
 
@@ -106,4 +112,37 @@
 #wihu {
   width: 30px;
   height: 30px;
+}
+
+@media screen and (max-width: 430px) {
+  body {
+    margin: 10px;
+  }
+
+  .top-bar input {
+    width: 300px;
+    font-size: 18px;
+  }
+
+  .search-icon {
+    width: 35px;
+    height: 35px;
+    margin-top: 2px;
+  }
+
+  .data-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 40px;
+  }
+
+  .weather-location {
+    font-size: 30px;
+  }
+
+  .weather-temp {
+    font-size: 28px;
+    font-weight: 600;
+  }
 }

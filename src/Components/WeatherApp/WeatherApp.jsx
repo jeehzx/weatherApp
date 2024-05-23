@@ -47,9 +47,13 @@ const WeatherApp = () => {
         break
       case '02d':
       case '02n':
+        setWeatherIcon(cloud_icon)
+        break
       case '03d':
       case '03n':
-        setWeatherIcon(cloud_icon)
+      case '04d':
+      case '04n':
+        setWeatherIcon(drizzle_icon)
         break
       case '09d':
       case '09n':
@@ -79,30 +83,30 @@ const WeatherApp = () => {
         <input
           type="text"
           className="cityInput"
-          placeholder="Search"
+          placeholder="Search your city"
           value={cityInput}
           onKeyDown={handleKeyDown}
           onChange={(e) => setCityInput(e.target.value)}
         />
         <div className="search-icon" onClick={updateWeatherData}>
-          <img src={search_icon} />
+          <img src={search_icon} alt="" />
         </div>
       </div>
       <div className="weather-image">
-        <img src={weatherIcon} id="icon" />
+        <img src={weatherIcon} id="icon" alt="" />
       </div>
       <div className="weather-temp">{weatherData.temperature}</div>
       <div className="weather-location">{weatherData.location}</div>
       <div className="data-container">
         <div className="element">
-          <img src={humidity_icon} id="wihuser" />
+          <img src={humidity_icon} id="wihuser" alt="" />
           <div className="data">
             <div className="humidity-percent">{weatherData.humidity}</div>
             <div className="text">Humidity</div>
           </div>
         </div>
         <div className="element">
-          <img src={wind_icon} id="wihuser" />
+          <img src={wind_icon} id="wihuser" alt="" />
           <div className="data">
             <div className="wind-rate">{weatherData.windSpeed}</div>
             <div className="text">Wind Speed</div>
