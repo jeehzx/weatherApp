@@ -67,7 +67,7 @@ const WeatherApp = () => {
     }
   }
 
-  const onKeyDown = (event) => {
+  const handleKeyDown = (event) => {
     if (event.key === 'Enter') {
       updateWeatherData()
     }
@@ -81,7 +81,7 @@ const WeatherApp = () => {
           className="cityInput"
           placeholder="Search"
           value={cityInput}
-          onKeyDown={handleKeyPress}
+          onKeyDown={handleKeyDown}
           onChange={(e) => setCityInput(e.target.value)}
         />
         <div className="search-icon" onClick={updateWeatherData}>
